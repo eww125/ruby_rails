@@ -1,4 +1,4 @@
-sudo gem install rails
+#sudo gem install rails
 rails new MySite
 cd MySite
 bundle install
