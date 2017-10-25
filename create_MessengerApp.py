@@ -19,10 +19,30 @@ rake db:seed
 rails generate controller Messages
 #app/controllers/messages_controller.rb)
 class MessagesController < ApplicationController
-  def index 
-    @messages = Message.all 
+	def index
+		@messages = Message.all
+	end
+  
+  def new 
+  	@message = Message.new 
+	end
+  
+  def create 
+  	@message = Message.new(message_params) 
+  	if @message.save 
+    	redirect_to '/messages' 
+  	else 
+   	 render 'new' 
+ 	 end 
+	end
+  
+  private 
+  def message_params 
+    params.require(:message).permit(:content) 
   end
+  
 end
+
 
 #app/views/messages/index.html.erb
 <div class="header">
@@ -48,3 +68,9 @@ end
   </div>
 </div>
 
+#config/routes.rb
+Rails.application.routes.draw do
+	get '/messages' => 'messages#index'
+  get '/messages/new' => 'messages#new'
+	post 'messages' => 'messages#create'
+end
