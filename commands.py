@@ -27,3 +27,11 @@ end
 
 #app/assets/stylesheets/pages.css.scss
 https://raw.githubusercontent.com/eww125/ruby_rails/master/pages.css.scss
+
+#github, create repo w/ no ReadMe
+git init
+git add .
+git commit -m "First Commit"
+git remote add origin https://github.com/eww125/MySite.git
+git remote -v
+git push -u origin master
