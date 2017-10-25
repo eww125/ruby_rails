@@ -26,3 +26,4 @@ end
 </div>
 
 #app/assets/stylesheets/pages.css.scss
+https://raw.githubusercontent.com/eww125/ruby_rails/master/pages.css.scss
