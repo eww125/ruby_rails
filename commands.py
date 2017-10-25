@@ -24,3 +24,5 @@ end
     <p>I make Rails apps.</p>
   </div>
 </div>
+
+#app/assets/stylesheets/pages.css.scss
