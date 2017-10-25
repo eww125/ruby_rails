@@ -1,3 +1,0 @@
-rails new MessengerApp
-cd MessengerApp
-bundle install
