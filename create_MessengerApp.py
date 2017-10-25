@@ -74,3 +74,30 @@ Rails.application.routes.draw do
   get '/messages/new' => 'messages#new'
 	post 'messages' => 'messages#create'
 end
+
+#app/views/new.html.erb
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1m.svg">
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+    
+    <!-- Your code here -->
+		<%= form_for(@message) do |f| %>  
+  <div class="field"> 
+    <%= f.label :message %><br> 
+    <%= f.text_area :content %> 
+  </div> 
+  <div class="actions"> 
+    <%= f.submit "Create" %> 
+  </div> 
+<% end %>
+
+    
+    
+  </div>
+</div>
